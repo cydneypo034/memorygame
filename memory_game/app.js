@@ -62,21 +62,9 @@ function flipCard() {
       }
   }
 
-  // function randomize() {
-  //   const cardId = this.getAttribute('data-id');
-  //   const PicCard = cards[cardId].cardImage[Math.floor(Math.random() * cardPic.length)];
-  //   console.log(PicCard);
-  // }
-
+  // reset the game
   function resetGame () {
     const board = document.getElementById("game-board");
     board.innerHTML = '';
     createBoard();
   }
-
-// //defines reset button & check if button is null
-const button = document.getElementById('button');
-if (button) {
-  button.addEventListener('click', reset);
-}
-
