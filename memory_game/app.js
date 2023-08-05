@@ -24,9 +24,9 @@ var cards = [
 var cardsInPlay = [];
 
 function createBoard () {
-  var board = document.getElementById("game-board");
+  const board = document.getElementById("game-board");
   for (var i = 0; i < cards.length; i++) {
-  var cardElement = document.createElement("img");
+  const cardElement = document.createElement("img");
     cardElement.setAttribute("src", "images/back.png");
     cardElement.setAttribute("data-id", i);
     cardElement.addEventListener("click", flipCard);
@@ -35,7 +35,7 @@ function createBoard () {
 };
 
 function flipCard() {  
-    var cardId =this.getAttribute('data-id');
+    const cardId =this.getAttribute('data-id');
     console.log("User flipped" + " " + cards[cardId].rank);
     cardsInPlay.push(cards[cardId].rank); 
     this.setAttribute('src', 'cards[cardId].cardImage');
@@ -56,9 +56,10 @@ function flipCard() {
       }
   }
 
-// //defines reset button
-var button = document.getElementById('button');
-
+// //defines reset button & check if button is null
+const button = document.getElementById('button');
+if (button) {
   button.addEventListener('click', reset);
+}
 createBoard();
 
