@@ -21,8 +21,10 @@ var cards = [
 }
 ];
 
+// empty array to fill with cards
 var cardsInPlay = [];
 
+// creates game board
 function createBoard () {
   const board = document.getElementById("game-board");
   for (let i = 0; i < cards.length; i++) {
@@ -35,12 +37,13 @@ function createBoard () {
 };
 createBoard();
 
+// card flip functionality
 function flipCard() {  
     const cardId = this.getAttribute('data-id');
     console.log("User flipped" + " " + cards[cardId].rank);
     cardsInPlay.push(cards[cardId].rank); 
-    // console.log(cards[cardId].cardImage);
-    // console.log(cards[cardId].suit);
+    console.log(cards[cardId].cardImage);
+    console.log(cards[cardId].suit);
     this.setAttribute("src", cards[cardId].cardImage);
     if (cardsInPlay.length == 2) {
       checkForMatch();
@@ -48,13 +51,27 @@ function flipCard() {
     }
 };
 
+// checks for a match
  function checkForMatch () {
-  //if (cardsInPlay.length == 2) {
     if (cardsInPlay[0] === cardsInPlay[1]) {
       alert("You found a match!");
+      resetGame();
       } else {
       alert("Sorry, try again.");
+      resetGame();
       }
+  }
+
+  // function randomize() {
+  //   const cardId = this.getAttribute('data-id');
+  //   const PicCard = cards[cardId].cardImage[Math.floor(Math.random() * cardPic.length)];
+  //   console.log(PicCard);
+  // }
+
+  function resetGame () {
+    const board = document.getElementById("game-board");
+    board.innerHTML = '';
+    createBoard();
   }
 
 // //defines reset button & check if button is null
