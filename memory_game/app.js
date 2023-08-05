@@ -51,6 +51,13 @@ function flipCard() {
     }
 };
 
+ // reset the game
+ function resetGame () {
+    const board = document.getElementById("game-board");
+    board.innerHTML = '';
+    createBoard();
+}
+
 // checks for a match
  function checkForMatch () {
     if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -60,11 +67,4 @@ function flipCard() {
       alert("Sorry, try again.");
       resetGame();
       }
-  }
-
-  // reset the game
-  function resetGame () {
-    const board = document.getElementById("game-board");
-    board.innerHTML = '';
-    createBoard();
   }

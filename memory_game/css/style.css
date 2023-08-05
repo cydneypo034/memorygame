@@ -1,6 +1,5 @@
-<style>
 header {
-	background-color: #F15B31;
+	background-color: #8e64e6;
 	padding-top: 30px;
 	padding-right: 20px;
 	padding-bottom: 30px;
@@ -13,23 +12,7 @@ h1 {
 	font-weight: 400px;
 	font-size: 45px;
 }
-nav {
-	background-color: #00A6B3;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-a {
-	font-family: "Bitter"
-	color: #FFFFFF;
-	letter-spacing: 1px;
-	font-weight: 600px;
-	margin-right: 20px;
-	margin-left: 20px;
-	border-bottom: 2px solid transparent;
-}
-a: hover {
-	border-color: white;
-}
+
 main {
 	width: 850px;
 	margin-top: 35px;
@@ -59,24 +42,7 @@ img {
 	margin-right: 8px;
 	margin-left: 8px;
 }
-footer {
-	text-transform: uppercase;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-color: #0D2C40;
-	color: white;
-	font-size: 14px;
-	letter-spacing: .08em;
-	font-weight: 500px;
-}
-.copyright {
-	float: left;
-	font-family: "Bitter";
-}
-.message {
-	float: right;
-	font-family: "Bitter";
-}
+
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -85,8 +51,3 @@ footer {
 	height: 0;
 	font-size: 0;
 }
-.name  {
-	color: #F15B31;
-	font-weight: 700px;
-}
-</style>
