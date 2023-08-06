@@ -2,22 +2,22 @@ var cards = [
 {
   rank: "king",
   suit: "diamonds",
-  cardImage: "images/king-of-diamonds.png"
+  cardImage: "playing_cards/king-of-diamonds.png"
 },
 {
   rank: "king",
   suit: "hearts",
-  cardImage: "images/king-of-hearts.png"
+  cardImage: "playing_cards/king-of-hearts.png"
 },
 {
   rank: "queen",
   suit: "diamonds",
-  cardImage: "images/queen-of-diamonds.png"
+  cardImage: "playing_cards/queen-of-diamonds.png"
 },
 {
   rank: "queen",
   suit: "hearts",
-  cardImage: "images/queen-of-hearts.png"
+  cardImage: "playing_cards/queen-of-hearts.png"
 }
 ];
 
@@ -29,7 +29,7 @@ function createBoard () {
   const board = document.getElementById("game-board");
   for (let i = 0; i < cards.length; i++) {
   const cardElement = document.createElement("img");
-    cardElement.setAttribute("src", "images/back.png");
+    cardElement.setAttribute("src", "playing_cards/back.png");
     cardElement.setAttribute("data-id", i);
     cardElement.addEventListener("click", flipCard);
     board.appendChild(cardElement);
